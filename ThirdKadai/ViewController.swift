@@ -44,11 +44,18 @@ class ViewController: UIViewController {
     
     //再生・一時停止を押した時
     @IBAction func startStop(_ sender: Any) {
+        Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(onTimer(_:)), userInfo: nil, repeats: true)
     }
     
-    //タイマー
-
     
+    @objc func onTimer(_ timer: Timer){
+        if imageindex == 2 {
+        imageindex = 0
+        } else {
+        imageindex += 1
+        }
+        imageView.image = images[imageindex]
+    }
 
 }
 
