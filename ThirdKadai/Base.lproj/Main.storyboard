@@ -42,9 +42,13 @@
                                     <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Yp-zX-zGT"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4yA-UU-hkM">
-                                <rect key="frame" x="95" y="153" width="240" height="128"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4yA-UU-hkM">
+                                <rect key="frame" x="95" y="152" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="owP-Et-5kx" appends="YES" id="69a-hC-AgP"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -52,10 +56,50 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="4yA-UU-hkM" id="W3w-zG-KbY"/>
+                        <segue destination="c7P-pX-aa2" kind="show" identifier="resultViewController" id="iet-KH-p7O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="owP-Et-5kx">
+                    <connections>
+                        <action selector="tapImage:" destination="BYZ-38-t0r" id="JV2-a8-6O3"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="-20" y="88"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="J16-89-o8G">
+            <objects>
+                <viewController id="c7P-pX-aa2" customClass="ResultViewController" customModule="ThirdKadai" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ABa-2r-ojZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uxs-7H-mtZ">
+                                <rect key="frame" x="87" y="152" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G13-Gv-D4t">
+                                <rect key="frame" x="192" y="375" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <segue destination="wST-Hu-KVy" kind="unwind" unwindAction="unwindToTopWithSegue:" id="LcL-lH-OpG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="8xa-C6-ozT"/>
+                    </view>
+                    <connections>
+                        <outlet property="tappedImageView" destination="Uxs-7H-mtZ" id="xHa-ey-2xh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3hX-NS-bil" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="wST-Hu-KVy" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="664" y="88"/>
         </scene>
     </scenes>
 </document>

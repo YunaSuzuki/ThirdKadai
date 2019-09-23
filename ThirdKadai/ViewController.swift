@@ -9,7 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
+    @IBAction func unwindToTop(segue: UIStoryboardSegue) {
+    }
     @IBOutlet weak var imageView: UIImageView!
      let images: [UIImage] = [UIImage(named:"image1.png")!, UIImage(named:"image2.png")!, UIImage(named:"image3.png")!]
     var imageindex = 0
@@ -47,7 +50,7 @@ class ViewController: UIViewController {
         Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(onTimer(_:)), userInfo: nil, repeats: true)
     }
     
-    
+    //スライドショー内での画像の切り替え
     @objc func onTimer(_ timer: Timer){
         if imageindex == 2 {
         imageindex = 0
@@ -56,6 +59,27 @@ class ViewController: UIViewController {
         }
         imageView.image = images[imageindex]
     }
-
+    
+    //画面遷移
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!){
+        
+        if (segue.identifier == "resultViewController"){
+            
+            let resultViewController: ResultViewController = (segue.destination as? ResultViewController)!
+            
+            resultViewController.selectedImage = imageView.image
+            
+        }
+        
+    }
+    
+    //画像たタップした時
+    
+    @IBAction func tapImage(_ sender: Any) {
+        self.performSegue(withIdentifier: "resultViewController", sender: nil)
+        
+    }
+    
+    
 }
 
