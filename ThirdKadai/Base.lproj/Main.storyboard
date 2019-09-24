@@ -27,9 +27,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5b-DA-Fz9" userLabel="再生/停止">
-                                <rect key="frame" x="174" y="365" width="66" height="30"/>
+                                <rect key="frame" x="192" y="365" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="再生/停止"/>
+                                <state key="normal" title="再生"/>
                                 <connections>
                                     <action selector="startStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CIk-iH-Pfw"/>
                                 </connections>
@@ -55,7 +55,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="back_outlet" destination="XsJ-wT-WyL" id="bx6-T1-GHo"/>
                         <outlet property="imageView" destination="4yA-UU-hkM" id="W3w-zG-KbY"/>
+                        <outlet property="next_outlet" destination="NsL-TJ-aGO" id="pPE-yV-vrn"/>
+                        <outlet property="startStop_outlet" destination="T5b-DA-Fz9" id="WPP-OS-22u"/>
                         <segue destination="c7P-pX-aa2" kind="show" identifier="resultViewController" id="iet-KH-p7O"/>
                     </connections>
                 </viewController>

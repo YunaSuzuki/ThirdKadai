@@ -17,6 +17,9 @@ class ViewController: UIViewController {
      let images: [UIImage] = [UIImage(named:"image1.png")!, UIImage(named:"image2.png")!, UIImage(named:"image3.png")!]
     var imageindex = 0
     var timer :Timer!
+    @IBOutlet weak var back_outlet: UIButton!
+    @IBOutlet weak var next_outlet: UIButton!
+    @IBOutlet weak var startStop_outlet: UIButton!
     
     
     override func viewDidLoad() {
@@ -48,6 +51,9 @@ class ViewController: UIViewController {
     //再生・一時停止を押した時
     @IBAction func startStop(_ sender: Any) {
         Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(onTimer(_:)), userInfo: nil, repeats: true)
+        back_outlet.isEnabled = false
+        next_outlet.isEnabled = false
+        startStop_outlet.setTitle("停止", for: .normal)
     }
     
     //スライドショー内での画像の切り替え
