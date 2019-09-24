@@ -50,10 +50,17 @@ class ViewController: UIViewController {
     
     //再生・一時停止を押した時
     @IBAction func startStop(_ sender: Any) {
-        Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(onTimer(_:)), userInfo: nil, repeats: true)
-        back_outlet.isEnabled = false
-        next_outlet.isEnabled = false
-        startStop_outlet.setTitle("停止", for: .normal)
+        if self.timer == nil{
+            self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(onTimer(_:)), userInfo: nil, repeats: true)
+            back_outlet.isEnabled = false
+            next_outlet.isEnabled = false
+            startStop_outlet.setTitle("停止", for: .normal)
+        } else{
+            self.timer.invalidate()
+            self.timer = nil
+            back_outlet.isEnabled = true
+            next_outlet.isEnabled = true
+        }
     }
     
     //スライドショー内での画像の切り替え
