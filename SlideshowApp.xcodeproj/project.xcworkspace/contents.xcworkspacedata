@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ThirdKadai.xcodeproj">
+      location = "self:/Users/yuna/techacademy/ThirdKadai/SlideshowApp.xcodeproj">
    </FileRef>
 </Workspace>

@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AED3D81823387F7E004E482C /* ThirdKadai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThirdKadai.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AED3D81823387F7E004E482C /* SlideshowApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideshowApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED3D81B23387F7E004E482C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AED3D81D23387F7E004E482C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AED3D82023387F7E004E482C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		AED3D81923387F7E004E482C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AED3D81823387F7E004E482C /* ThirdKadai.app */,
+				AED3D81823387F7E004E482C /* SlideshowApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,9 +79,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AED3D81723387F7E004E482C /* ThirdKadai */ = {
+		AED3D81723387F7E004E482C /* SlideshowApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AED3D82A23387F7F004E482C /* Build configuration list for PBXNativeTarget "ThirdKadai" */;
+			buildConfigurationList = AED3D82A23387F7F004E482C /* Build configuration list for PBXNativeTarget "SlideshowApp" */;
 			buildPhases = (
 				AED3D81423387F7E004E482C /* Sources */,
 				AED3D81523387F7E004E482C /* Frameworks */,
@@ -91,9 +91,9 @@
 			);
 			dependencies = (
 			);
-			name = ThirdKadai;
+			name = SlideshowApp;
 			productName = ThirdKadai;
-			productReference = AED3D81823387F7E004E482C /* ThirdKadai.app */;
+			productReference = AED3D81823387F7E004E482C /* SlideshowApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -111,7 +111,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AED3D81323387F7E004E482C /* Build configuration list for PBXProject "ThirdKadai" */;
+			buildConfigurationList = AED3D81323387F7E004E482C /* Build configuration list for PBXProject "SlideshowApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -124,7 +124,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AED3D81723387F7E004E482C /* ThirdKadai */,
+				AED3D81723387F7E004E482C /* SlideshowApp */,
 			);
 		};
 /* End PBXProject section */
@@ -333,7 +333,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AED3D81323387F7E004E482C /* Build configuration list for PBXProject "ThirdKadai" */ = {
+		AED3D81323387F7E004E482C /* Build configuration list for PBXProject "SlideshowApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AED3D82823387F7F004E482C /* Debug */,
@@ -342,7 +342,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AED3D82A23387F7F004E482C /* Build configuration list for PBXNativeTarget "ThirdKadai" */ = {
+		AED3D82A23387F7F004E482C /* Build configuration list for PBXNativeTarget "SlideshowApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AED3D82B23387F7F004E482C /* Debug */,
