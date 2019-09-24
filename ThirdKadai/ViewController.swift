@@ -60,6 +60,7 @@ class ViewController: UIViewController {
             self.timer = nil
             back_outlet.isEnabled = true
             next_outlet.isEnabled = true
+            startStop_outlet.setTitle("再生", for: .normal)
         }
     }
     
