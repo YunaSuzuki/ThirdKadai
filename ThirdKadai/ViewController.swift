@@ -84,6 +84,7 @@ class ViewController: UIViewController {
             
             resultViewController.selectedImage = imageView.image
             
+            
         }
         
     }
@@ -92,7 +93,13 @@ class ViewController: UIViewController {
     
     @IBAction func tapImage(_ sender: Any) {
         self.performSegue(withIdentifier: "resultViewController", sender: nil)
-        
+        if timer != nil{
+            self.timer.invalidate()
+            self.timer = nil
+            back_outlet.isEnabled = true
+            next_outlet.isEnabled = true
+            startStop_outlet.setTitle("再生", for: .normal)
+        }
     }
     
     
